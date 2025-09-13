@@ -9,7 +9,7 @@ async function bootstrap() {
     app.listen(config.port, () => {
 
         
-      console.lo(`Application app listening on port ${config.port}`)
+      console.log(`Application app listening on port ${config.port}`)
     })
   } catch (err) {
     console.log('failed to connect database', err)
