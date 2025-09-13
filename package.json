@@ -8,12 +8,17 @@
     "lint:check": "eslint --ext .js,.ts .",
     "lint:fix": "eslint . --fix",
     "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+     "lint-prettier": "yarn lint:check && yarn prettier:check",
     "prettier:fix": "prettier --write .",
     "lint-prettier": "yarn lint:check && yarn prettier:check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Programming Hero",
   "license": "ISC",
+  "lint-staged": {
+    "src/**/*.ts":"yarn lint-prettier"
+  },
+  
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
