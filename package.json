@@ -5,6 +5,11 @@
   "main": "src/server.ts",
   "scripts": {
     "start": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "lint:check": "eslint --ext .js,.ts .",
+    "lint:fix": "eslint . --fix",
+    "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "prettier:fix": "prettier --write .",
+    "lint-prettier": "yarn lint:check && yarn prettier:check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Programming Hero",
@@ -12,12 +17,17 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.6.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.43.0",
+    "@typescript-eslint/parser": "^8.43.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
+    "eslint": "^9.35.0",
     "express": "^5.1.0",
     "mongoose": "^8.18.1"
   }
