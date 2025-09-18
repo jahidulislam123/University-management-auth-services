@@ -1,0 +1,2 @@
+2025-09-18 11:02:36 [User-Service] error: failed to connect database The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+2025-09-18 11:05:44 [User-Service] error: failed to connect database querySrv ECONNREFUSED _mongodb._tcp.cluster0.umt6hun.mongodb.net

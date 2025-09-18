@@ -10,6 +10,11 @@ app.use(express.json())
 
 app.use(express.urlencoded({ extended: true }))
 
+//application 
+console.log(app.get('env'))
+console.log(process.env);
+
+
 // Application routes
 app.use('/api/v1/users/', router)
 
